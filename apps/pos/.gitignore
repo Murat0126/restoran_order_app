@@ -1,0 +1,42 @@
+# Стандартный Flutter .gitignore + специфика POS.
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+ios/Pods/
+ios/.symlinks/
+android/.gradle/
+android/.idea/
+android/local.properties
+linux/flutter/ephemeral/
+macos/Flutter/ephemeral/
+windows/flutter/ephemeral/
+
+# Сгенерированный код (восстанавливается build_runner).
+# Решение: lock сгенерированных файлов мы НЕ коммитим — пусть генерится
+# при сборке. Если CI окажется медленным — пересмотрим.
+*.g.dart
+*.freezed.dart
+lib/l10n/generated/
+
+# Не коммитим скомпилированную локализацию (F2).
+# .arb-исходники — коммитим (см. lib/l10n/arb).
+
+# Coverage и тестовые артефакты.
+coverage/
+.coverage/
+*.lcov
+
+# Локальные секреты (env, ключи подписи).
+*.env
+*.keystore
+key.properties

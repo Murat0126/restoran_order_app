@@ -1,0 +1,15 @@
+name: shared_models
+description: Общие типизированные модели и события для сервера, POS и QR-меню.
+version: 0.1.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  collection: ^1.18.0
+  meta: ^1.16.0
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0

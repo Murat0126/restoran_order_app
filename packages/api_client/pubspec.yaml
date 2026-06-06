@@ -1,0 +1,18 @@
+name: api_client
+description: Типизированный HTTP+WebSocket клиент для restaurant_server.
+version: 0.1.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  http: ^1.2.0
+  meta: ^1.16.0
+  shared_models:
+    path: ../shared_models
+  web_socket_channel: ^3.0.1
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0

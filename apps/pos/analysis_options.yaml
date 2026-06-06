@@ -1,0 +1,40 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    invalid_annotation_target: ignore       # шум от json_serializable
+    missing_required_param: error
+    missing_return: error
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "lib/l10n/generated/**"
+    - "build/**"
+
+linter:
+  rules:
+    # Качество кода
+    avoid_print: true
+    avoid_dynamic_calls: true
+    avoid_unused_constructor_parameters: true
+    cancel_subscriptions: true
+    close_sinks: true
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    prefer_const_declarations: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_final_locals: true
+    prefer_relative_imports: true
+    prefer_single_quotes: true
+    require_trailing_commas: false           # читаемость > форматирование
+
+    # Стиль
+    sort_constructors_first: true
+    sort_pub_dependencies: false             # держим логически сгруппированно
+    sort_unnamed_constructors_first: true
+    unawaited_futures: true
+    use_super_parameters: true

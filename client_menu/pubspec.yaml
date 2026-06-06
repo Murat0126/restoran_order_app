@@ -1,0 +1,25 @@
+name: client_menu
+description: Flutter Web — QR-меню для клиентов в зале с предзаказом.
+version: 0.1.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  api_client:
+    path: ../packages/api_client
+  shared_models:
+    path: ../packages/shared_models
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

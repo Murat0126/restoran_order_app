@@ -1,0 +1,60 @@
+name: pos
+description: POS-приложение ресторана (официант / касса / повар / директор / админ).
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Локальные пакеты монорепо.
+  api_client:
+    path: ../../packages/api_client
+  shared_models:
+    path: ../../packages/shared_models
+
+  # State management.
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Роутинг.
+  go_router: ^14.6.0
+
+  # Локализация.
+  intl: ^0.20.2
+
+  # Хранилище.
+  shared_preferences: ^2.3.0
+  sqflite: ^2.4.0
+  path: ^1.9.0
+  path_provider: ^2.1.4
+
+  # UI helpers.
+  collection: ^1.18.0
+  google_fonts: ^6.2.1
+
+  # Логирование (в Release пишем только warning+).
+  logging: ^1.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.4.3
+  custom_lint: ^0.7.6
+  riverpod_lint: ^2.6.4
+  http: ^1.2.0    # для http.testing.MockClient в тестах auth/api
+
+flutter:
+  uses-material-design: true
+  generate: true               # gen-l10n из lib/l10n/arb/*.arb
+  assets:
+    - assets/themes/
+    - assets/icons/

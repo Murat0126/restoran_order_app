@@ -41,3 +41,17 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Дизайн-артефакты Stitch (распаковка ZIP) — рабочая папка,
+# исходник у дизайнера, в репозитории дублировать не нужно.
+/design/
+
+# Локальные тестовые артефакты, генерируются на лету.
+/qr-test.png
+/qr-poster-preview.html
+
+# Cursor / локальные IDE-настройки.
+.cursor/
+
+# Android build output (корневой legacy-модуль).
+/android/build/

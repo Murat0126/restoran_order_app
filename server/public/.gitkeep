@@ -1,0 +1,6 @@
+# Сюда `build_and_run.ps1` копирует собранную Flutter Web сборку (client_menu).
+# Содержимое этой папки автоматически отдаётся Dart Frog по корню:
+#   /                 -> public/index.html
+#   /main.dart.js     -> public/main.dart.js
+#   /assets/...       -> public/assets/...
+# Не коммитим собранное — только этот плейсхолдер.

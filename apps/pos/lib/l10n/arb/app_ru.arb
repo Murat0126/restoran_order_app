@@ -1,0 +1,373 @@
+{
+  "@@locale": "ru",
+
+  "appTitle": "POS",
+  "@appTitle": {
+    "description": "Заголовок приложения, используется в окне OS / таб браузера."
+  },
+
+  "settingsTitle": "Настройки и превью темы",
+  "@settingsTitle": {
+    "description": "AppBar экрана Настройки (F3 демо)."
+  },
+
+  "settingsThemeSectionTitle": "Тема клиента",
+  "@settingsThemeSectionTitle": {
+    "description": "Заголовок блока выбора темы (white-label)."
+  },
+  "settingsThemeSectionSubtitle": "В проде список придёт с сервера, выбор сохранится в Админке.",
+  "@settingsThemeSectionSubtitle": {
+    "description": "Описание блока выбора темы. Объясняет временность хардкода."
+  },
+
+  "settingsModeSectionTitle": "Режим",
+  "@settingsModeSectionTitle": {
+    "description": "Заголовок блока выбора режима (light/dark/system)."
+  },
+  "settingsModeSectionSubtitle": "Тёмная пока сгенерирована автоматически (M3 fromSeed). Получим явные hex от дизайнера — заменится одной правкой JSON.",
+  "@settingsModeSectionSubtitle": {
+    "description": "Описание блока режима."
+  },
+  "settingsModeLight": "Светлая",
+  "settingsModeDark": "Тёмная",
+  "settingsModeSystem": "Системная",
+
+  "settingsLanguageSectionTitle": "Язык интерфейса",
+  "@settingsLanguageSectionTitle": {
+    "description": "Заголовок блока выбора языка."
+  },
+  "settingsLanguageSectionSubtitle": "Сохранится при следующем запуске.",
+  "@settingsLanguageSectionSubtitle": {},
+
+  "languageRussian": "Русский",
+  "languageKyrgyz": "Кыргызча",
+
+  "settingsPreviewTypographySection": "Типография",
+  "settingsPreviewPaletteSection": "Палитра — основные роли",
+  "settingsPreviewSurfacesSection": "Surface — уровни глубины",
+  "settingsPreviewComponentsSection": "Компоненты",
+
+  "settingsComponentsButtons": "Кнопки",
+  "settingsComponentsChips": "Чипы / теги",
+  "settingsComponentsInput": "Поля ввода",
+  "settingsComponentsCard": "Карточка (уровень 1)",
+
+  "buttonConfirm": "Подтвердить",
+  "buttonCancel": "Отмена",
+  "buttonDetails": "Подробнее",
+  "buttonPrintReceipt": "Печать чека",
+
+  "formGuestName": "Имя гостя",
+  "formGuestNameHint": "Введите имя",
+  "formPassword": "Пароль",
+
+  "splashLoadingTheme": "Загрузка темы…",
+  "@splashLoadingTheme": {
+    "description": "Текст под спиннером, пока FutureProvider темы не разрешился."
+  },
+  "splashErrorTheme": "Ошибка темы: {message}",
+  "@splashErrorTheme": {
+    "description": "Сообщение об ошибке загрузки темы.",
+    "placeholders": {
+      "message": { "type": "String", "example": "FormatException: ..." }
+    }
+  },
+  "splashLoadingApp": "Загрузка приложения…",
+
+  "loginTitle": "Вход для сотрудников",
+  "@loginTitle": { "description": "Заголовок формы логина (Stitch 2.1)." },
+  "loginFormSubtitle": "Пожалуйста, введите свои данные для начала смены",
+  "loginBrandHeroTitle": "Epicure POS",
+  "loginBrandTagline": "Умная система управления вашим рестораном",
+  "loginFooterVersion": "версия {version}",
+  "@loginFooterVersion": {
+    "placeholders": { "version": { "type": "String" } }
+  },
+  "loginFieldRequired": "Обязательное поле",
+  "loginOrDivider": "или",
+  "loginPinButton": "Вход по PIN",
+  "loginPinTitle": "Введите PIN",
+  "loginPinStubMessage": "PIN-вход будет подключён в следующей версии",
+  "loginServerStatus": "Сервер: {status}",
+  "@loginServerStatus": {
+    "placeholders": { "status": { "type": "String" } }
+  },
+  "appVersionLabel": "Версия {version}",
+  "@appVersionLabel": {
+    "placeholders": { "version": { "type": "String" } }
+  },
+  "loginSubtitle": "Войдите под учётной записью сотрудника",
+  "loginDevModeNotice": "DEV: вход без проверки пароля",
+  "loginAsRole": "Войти как {role}",
+  "@loginAsRole": {
+    "placeholders": {
+      "role": { "type": "String", "example": "Официант" }
+    }
+  },
+
+  "roleAdmin": "Администратор",
+  "roleDirector": "Директор",
+  "roleWaiter": "Официант",
+  "roleCashier": "Кассир",
+  "roleKds": "Кухня (KDS)",
+
+  "actionLogout": "Выйти",
+  "actionOpenSettings": "Настройки",
+  "actionGoHome": "На главную",
+
+  "homeAdminTitle": "Главная — Администратор",
+  "homeDirectorTitle": "Главная — Директор",
+  "homeWaiterTitle": "Главная — Официант",
+  "homeCashierTitle": "Главная — Кассир",
+  "homeKdsTitle": "Главная — Кухня (KDS)",
+  "homePlaceholderHeading": "Каркас готов",
+  "homePlaceholderBody": "Полный рабочий интерфейс роли «{role}» появится в Этапе 1+. Сейчас F4 — это только роутинг, авторизация и redirect-логика.",
+  "@homePlaceholderBody": {
+    "placeholders": {
+      "role": { "type": "String", "example": "Официант" }
+    }
+  },
+
+  "notFoundTitle": "Страница не найдена",
+  "notFoundBody": "Маршрут «{path}» не существует.",
+  "@notFoundBody": {
+    "placeholders": {
+      "path": { "type": "String", "example": "/foo" }
+    }
+  },
+
+  "signedInAs": "Вы вошли как {username} ({role})",
+  "@signedInAs": {
+    "placeholders": {
+      "username": { "type": "String" },
+      "role": { "type": "String" }
+    }
+  },
+
+  "loginUsernameLabel": "Имя пользователя",
+  "loginUsernameHint": "Введите имя",
+  "loginPasswordLabel": "Пароль",
+  "loginPasswordHint": "••••",
+  "loginSubmit": "Войти",
+  "loginSigningIn": "Вход…",
+  "loginErrorBadCredentials": "Неверный логин или пароль",
+  "loginErrorNetwork": "Сервер недоступен: {url}",
+  "@loginErrorNetwork": {
+    "placeholders": {
+      "url": { "type": "String", "example": "http://localhost:8080" }
+    }
+  },
+  "loginErrorOther": "Ошибка: {message}",
+  "@loginErrorOther": {
+    "placeholders": {
+      "message": { "type": "String" }
+    }
+  },
+  "loginQuickDevTitle": "Быстрый вход (DEV)",
+  "loginQuickDevSubtitle": "Тестовые учётки сидируются сервером. На проде блок скрывается.",
+
+  "connectionConnected": "Онлайн",
+  "connectionConnecting": "Подключение…",
+  "connectionDisconnected": "Офлайн",
+  "connectionTooltip": "{status} · {url}",
+  "@connectionTooltip": {
+    "placeholders": {
+      "status": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+
+  "settingsServerSectionTitle": "Сервер",
+  "settingsServerSectionSubtitle": "Адрес Dart Frog API. При изменении пересоберутся API-клиент и realtime-канал.",
+  "settingsServerBaseUrlLabel": "Базовый URL",
+  "settingsServerBaseUrlHint": "http://192.168.1.10:8080",
+  "settingsServerCurrent": "Текущий: {url}",
+  "@settingsServerCurrent": {
+    "placeholders": {
+      "url": { "type": "String" }
+    }
+  },
+  "settingsServerSave": "Сохранить",
+  "settingsServerReset": "Сбросить",
+  "settingsServerTestConnection": "Проверить соединение",
+  "settingsServerTesting": "Проверяем…",
+  "settingsServerTestOk": "Сервер ответил OK ({ms} мс)",
+  "@settingsServerTestOk": {
+    "placeholders": {
+      "ms": { "type": "int" }
+    }
+  },
+  "settingsServerTestFail": "Не отвечает: {error}",
+  "@settingsServerTestFail": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+
+  "formatDurationLessThanMinute": "< 1 мин",
+  "formatDurationMinutes": "{count} мин",
+  "@formatDurationMinutes": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "formatDurationHours": "{hours} ч",
+  "@formatDurationHours": {
+    "placeholders": { "hours": { "type": "int" } }
+  },
+  "formatDurationHoursMinutes": "{hours} ч {minutes} мин",
+  "@formatDurationHoursMinutes": {
+    "placeholders": {
+      "hours": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+
+  "emptyStateNoOrdersTitle": "Заказов пока нет",
+  "emptyStateNoOrdersSubtitle": "Откройте столик или дождитесь QR-предзаказа",
+  "errorStateGenericTitle": "Не удалось загрузить",
+  "errorStateGenericSubtitle": "Проверьте соединение с сервером и попробуйте снова",
+  "actionRetry": "Повторить",
+
+  "settingsPreviewFormattersSection": "Форматирование",
+  "settingsPreviewWidgetsSection": "Виджеты design-system",
+
+  "waiterNavHall": "Зал",
+  "waiterNavHallMap": "Карта зала",
+  "waiterNavOrders": "Заказы",
+  "waiterNavMenu": "Меню",
+  "waiterNavProfile": "Профиль",
+  "waiterStationLabel": "Станция {number}",
+  "@waiterStationLabel": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterMenuStub": "Просмотр меню — в разработке",
+  "waiterOrdersTitle": "Мои заказы",
+  "waiterOrdersEmptyTitle": "Активных заказов нет",
+  "waiterOrdersEmptySubtitle": "Все гости обслужены или ожидают открытия нового счёта.",
+  "waiterOrdersFilterAll": "Все",
+  "waiterOrdersFilterCooking": "Готовятся",
+  "waiterOrdersFilterReady": "Готовы к подаче",
+  "waiterOrdersFilterPayment": "Ждут оплаты",
+  "waiterOrdersOpen": "Открыть",
+  "waiterOrdersServed": "Подал блюдо",
+  "waiterOrdersCardMeta": "{guests} гостя · {time}",
+  "@waiterOrdersCardMeta": {
+    "placeholders": {
+      "guests": { "type": "int" },
+      "time": { "type": "String" }
+    }
+  },
+  "waiterOrdersStatusCooking": "Готовится",
+  "waiterOrdersStatusReady": "Готов к подаче",
+  "waiterOrdersStatusPayment": "Ждёт оплаты",
+  "waiterHallSelectedTableLabel": "Выбранный стол",
+  "waiterHallSelectedTable": "Стол {number}",
+  "@waiterHallSelectedTable": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterHallSelectedStatusLabel": "Статус",
+  "waiterHallAssignWaiter": "Назначить официанта",
+  "waiterHallOpenOrder": "Открыть заказ",
+  "waiterNewOrder": "Новый заказ",
+  "waiterNotifications": "Уведомления",
+  "waiterNotificationsTitle": "Уведомления",
+  "waiterNotificationsEmpty": "Нет новых предзаказов с QR-меню",
+  "waiterPreorderOpen": "Открыть заказ",
+  "waiterPreorderTableTitle": "Стол {number}",
+  "@waiterPreorderTableTitle": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterPreorderItemsCount": "{count, plural, one{{count} позиция} few{{count} позиции} other{{count} позиций}}",
+  "@waiterPreorderItemsCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "tableStatusQrPreorder": "QR-предзаказ",
+  "waiterHallEmptyTitle": "Залы не настроены",
+  "waiterHallEmptySubtitle": "Добавьте залы и столики в админке",
+  "waiterHallNoTablesTitle": "В этом зале нет столов",
+  "waiterHallNoTablesSubtitle": "Проверьте настройки в админке",
+  "waiterOrderScreenTitle": "Заказ",
+  "waiterOrderStubTitle": "Стол {number} — экран заказа (W2)",
+  "@waiterOrderStubTitle": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterOrderStubBody": "Полный интерфейс заказа (меню + корзина) будет в W2.",
+  "waiterBackToHall": "Назад к залу",
+  "waiterOrdersStub": "Список заказов — в разработке (W4)",
+
+  "tableStatusFree": "Свободен",
+  "tableStatusOrderAccepted": "Заказ принят",
+  "tableStatusPendingPayment": "Ожидает оплаты",
+  "tableStatusNeedsCleaning": "Требует уборки",
+  "tableStatusVacated": "Освободился",
+  "waiterHallInactiveTitle": "Нет активных столов",
+  "waiterHallInactiveSubtitle": "В этой зоне нет активных заказов или клиентов. Начните новую смену или выберите другую зону зала.",
+  "tableStatusOccupied": "Занят",
+  "tableStatusOccupiedMinutes": "Занят {minutes} мин",
+  "@tableStatusOccupiedMinutes": {
+    "placeholders": { "minutes": { "type": "int" } }
+  },
+  "tableStatusReserved": "Резерв",
+  "tableStatusBill": "Счёт",
+  "tableSeats": "{count, plural, one{{count} место} few{{count} места} other{{count} мест}}",
+  "@tableSeats": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "waiterOrderTableTitle": "Стол {number}",
+  "@waiterOrderTableTitle": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterOrderHeader": "Стол {table} · Заказ {order}",
+  "@waiterOrderHeader": {
+    "placeholders": {
+      "table": { "type": "String" },
+      "order": { "type": "String" }
+    }
+  },
+  "waiterOrderGuests": "Гости",
+  "waiterOrderGuestsCaps": "Гости",
+  "waiterOrderMenuSection": "Меню",
+  "waiterOrderCartTitle": "Заказ",
+  "waiterOrderCartCurrent": "Текущий заказ",
+  "waiterOrderCartNewItems": "Новые позиции",
+  "waiterOrderCartSentKitchen": "Отправлено на кухню",
+  "waiterOrderSystemOnline": "Статус системы: Онлайн",
+  "waiterOrderLocalServer": "Локальный сервер v{version}",
+  "@waiterOrderLocalServer": {
+    "placeholders": { "version": { "type": "String" } }
+  },
+  "waiterOrderSupport": "Служба поддержки",
+  "waiterOrderHelp": "Помощь",
+  "waiterOrderCartEmpty": "Добавьте блюда из меню",
+  "waiterOrderTotal": "Итого",
+  "waiterOrderSumLabel": "Сумма:",
+  "waiterSendToKitchen": "Отправить на кухню",
+  "waiterSendToKitchenSuccess": "На кухню отправлено: {count}",
+  "@waiterSendToKitchenSuccess": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "waiterSendToKitchenEmpty": "Нет новых блюд для отправки",
+  "waiterSendToKitchenFailed": "Не удалось отправить на кухню",
+  "waiterSaveAndExit": "Сохранить и выйти",
+  "waiterOrderNoDishes": "Нет блюд в категории",
+  "waiterOrderTabMenu": "Меню",
+  "waiterOrderTabCart": "Корзина",
+  "waiterDishModifierDoneness": "Прожарка",
+  "waiterDishModifierOptions": "Опции",
+  "waiterDishCourseLabel": "Очередность подачи",
+  "waiterDishCourseSecond": "Курс 2",
+  "waiterDishCourseDefault": "По умолчанию: курс 1",
+  "waiterDishCommentLabel": "Комментарий для шефа",
+  "waiterDishCommentHint": "без соли, прожарка well done…",
+  "waiterDishAddCancel": "Отмена",
+  "waiterDishClose": "Закрыть",
+  "waiterDishBrowseFallback": "Описание блюда пока не добавлено.",
+  "waiterDishAddConfirm": "В заказ · {price}",
+  "@waiterDishAddConfirm": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  }
+}

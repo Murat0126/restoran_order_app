@@ -1,0 +1,18 @@
+include: package:lints/recommended.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  exclude:
+    - .dart_frog/**
+    - build/**
+
+linter:
+  rules:
+    avoid_print: false
+    require_trailing_commas: false
+    # Dart Frog использует [token].dart / qr-poster.dart как соглашение
+    # для динамических сегментов и URL-friendly имён.
+    file_names: false

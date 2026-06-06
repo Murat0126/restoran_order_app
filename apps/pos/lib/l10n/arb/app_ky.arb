@@ -1,0 +1,348 @@
+{
+  "@@locale": "ky",
+  "@@x-source-locale": "ru",
+  "@@x-translator-note": "Стартовые переводы для F2. Все строки требуют вычитки носителем кыргызского языка перед релизом — пометьте проверенные ключи через '@@x-verified-by'.",
+
+  "appTitle": "POS",
+
+  "settingsTitle": "Жөндөөлөр жана теманы алдын ала көрүү",
+
+  "settingsThemeSectionTitle": "Кардар темасы",
+  "settingsThemeSectionSubtitle": "Прод үчүн тизме сервер аркылуу келет, тандоо Админкада сакталат.",
+
+  "settingsModeSectionTitle": "Режим",
+  "settingsModeSectionSubtitle": "Караңгы режим азырынча автоматтык түрдө түзүлгөн (M3 fromSeed). Дизайнерден так hex алганда — JSON бир катар менен алмаштырылат.",
+  "settingsModeLight": "Жарык",
+  "settingsModeDark": "Караңгы",
+  "settingsModeSystem": "Системалык",
+
+  "settingsLanguageSectionTitle": "Интерфейс тили",
+  "settingsLanguageSectionSubtitle": "Кийинки иштеткенде сакталат.",
+
+  "languageRussian": "Орус тили",
+  "languageKyrgyz": "Кыргызча",
+
+  "settingsPreviewTypographySection": "Типография",
+  "settingsPreviewPaletteSection": "Палитра — негизги ролдор",
+  "settingsPreviewSurfacesSection": "Surface — терендик деңгээлдери",
+  "settingsPreviewComponentsSection": "Компоненттер",
+
+  "settingsComponentsButtons": "Баскычтар",
+  "settingsComponentsChips": "Чиптер / тегтер",
+  "settingsComponentsInput": "Толтуруу талаалары",
+  "settingsComponentsCard": "Карточка (1-деңгээл)",
+
+  "buttonConfirm": "Тастыктоо",
+  "buttonCancel": "Жокко чыгаруу",
+  "buttonDetails": "Толугураак",
+  "buttonPrintReceipt": "Чекти басуу",
+
+  "formGuestName": "Конок аты",
+  "formGuestNameHint": "Атын жазыңыз",
+  "formPassword": "Сыр сөз",
+
+  "splashLoadingTheme": "Тема жүктөлүүдө…",
+  "splashErrorTheme": "Тема катасы: {message}",
+  "@splashErrorTheme": {
+    "placeholders": {
+      "message": { "type": "String" }
+    }
+  },
+  "splashLoadingApp": "Колдонмо жүктөлүүдө…",
+
+  "loginTitle": "Кызматкерлер үчүн кирүү",
+  "loginFormSubtitle": "Сменаны баштоо үчүн маалыматтарыңызды киргизиңиз",
+  "loginBrandHeroTitle": "Epicure POS",
+  "loginBrandTagline": "Рестораныңызды башкаруунун акылдуу системасы",
+  "loginFooterVersion": "версия {version}",
+  "@loginFooterVersion": {
+    "placeholders": { "version": { "type": "String" } }
+  },
+  "loginFieldRequired": "Милдеттүү талаа",
+  "loginOrDivider": "же",
+  "loginPinButton": "PIN менен кирүү",
+  "loginPinTitle": "PIN киргизиңиз",
+  "loginPinStubMessage": "PIN-кирүү кийинки версияда туташат",
+  "loginServerStatus": "Сервер: {status}",
+  "@loginServerStatus": {
+    "placeholders": { "status": { "type": "String" } }
+  },
+  "appVersionLabel": "Версия {version}",
+  "@appVersionLabel": {
+    "placeholders": { "version": { "type": "String" } }
+  },
+  "loginSubtitle": "Кызматкердин каттоосу менен кириңиз",
+  "loginDevModeNotice": "DEV: сыр сөзсүз кирүү",
+  "loginAsRole": "{role} болуп кирүү",
+  "@loginAsRole": {
+    "placeholders": {
+      "role": { "type": "String" }
+    }
+  },
+
+  "roleAdmin": "Администратор",
+  "roleDirector": "Директор",
+  "roleWaiter": "Официант",
+  "roleCashier": "Кассир",
+  "roleKds": "Ашкана (KDS)",
+
+  "actionLogout": "Чыгуу",
+  "actionOpenSettings": "Жөндөөлөр",
+  "actionGoHome": "Башкы бетке",
+
+  "homeAdminTitle": "Башкы — Администратор",
+  "homeDirectorTitle": "Башкы — Директор",
+  "homeWaiterTitle": "Башкы — Официант",
+  "homeCashierTitle": "Башкы — Кассир",
+  "homeKdsTitle": "Башкы — Ашкана (KDS)",
+  "homePlaceholderHeading": "Каркас даяр",
+  "homePlaceholderBody": "«{role}» ролу үчүн толук иш интерфейси 1-этапта пайда болот. Азыр F4 — бул роутинг, авторизация жана redirect логикасы гана.",
+  "@homePlaceholderBody": {
+    "placeholders": {
+      "role": { "type": "String" }
+    }
+  },
+
+  "notFoundTitle": "Бет табылган жок",
+  "notFoundBody": "«{path}» маршруту жок.",
+  "@notFoundBody": {
+    "placeholders": {
+      "path": { "type": "String" }
+    }
+  },
+
+  "signedInAs": "Сиз {username} ({role}) катары киргенсиз",
+  "@signedInAs": {
+    "placeholders": {
+      "username": { "type": "String" },
+      "role": { "type": "String" }
+    }
+  },
+
+  "loginUsernameLabel": "Колдонуучу аты",
+  "loginUsernameHint": "Атыңызды киргизиңиз",
+  "loginPasswordLabel": "Сыр сөз",
+  "loginPasswordHint": "••••",
+  "loginSubmit": "Кирүү",
+  "loginSigningIn": "Кирүүдө…",
+  "loginErrorBadCredentials": "Логин же сыр сөз туура эмес",
+  "loginErrorNetwork": "Сервер жеткиликсиз: {url}",
+  "@loginErrorNetwork": {
+    "placeholders": {
+      "url": { "type": "String" }
+    }
+  },
+  "loginErrorOther": "Ката: {message}",
+  "@loginErrorOther": {
+    "placeholders": {
+      "message": { "type": "String" }
+    }
+  },
+  "loginQuickDevTitle": "Ыкчам кирүү (DEV)",
+  "loginQuickDevSubtitle": "Тест аккаунттар серверде даяр. Прод режимде блок жашырылат.",
+
+  "connectionConnected": "Онлайн",
+  "connectionConnecting": "Туташууда…",
+  "connectionDisconnected": "Офлайн",
+  "connectionTooltip": "{status} · {url}",
+  "@connectionTooltip": {
+    "placeholders": {
+      "status": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+
+  "settingsServerSectionTitle": "Сервер",
+  "settingsServerSectionSubtitle": "Dart Frog API дареги. Өзгөртсөңүз — API клиент жана realtime канал кайра түзүлөт.",
+  "settingsServerBaseUrlLabel": "Базалык URL",
+  "settingsServerBaseUrlHint": "http://192.168.1.10:8080",
+  "settingsServerCurrent": "Учурдагы: {url}",
+  "@settingsServerCurrent": {
+    "placeholders": {
+      "url": { "type": "String" }
+    }
+  },
+  "settingsServerSave": "Сактоо",
+  "settingsServerReset": "Калыбына келтирүү",
+  "settingsServerTestConnection": "Туташууну текшерүү",
+  "settingsServerTesting": "Текшерүүдө…",
+  "settingsServerTestOk": "Сервер OK кайтарды ({ms} мс)",
+  "@settingsServerTestOk": {
+    "placeholders": {
+      "ms": { "type": "int" }
+    }
+  },
+  "settingsServerTestFail": "Жооп бербейт: {error}",
+  "@settingsServerTestFail": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+
+  "formatDurationLessThanMinute": "< 1 мүн",
+  "formatDurationMinutes": "{count} мүн",
+  "@formatDurationMinutes": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "formatDurationHours": "{hours} саат",
+  "@formatDurationHours": {
+    "placeholders": { "hours": { "type": "int" } }
+  },
+  "formatDurationHoursMinutes": "{hours} саат {minutes} мүн",
+  "@formatDurationHoursMinutes": {
+    "placeholders": {
+      "hours": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+
+  "emptyStateNoOrdersTitle": "Азырынча буйрутма жок",
+  "emptyStateNoOrdersSubtitle": "Стол ачыңыз же QR алдын ала буйрутманы күтүңүз",
+  "errorStateGenericTitle": "Жүктөө мүмкүн болгон жок",
+  "errorStateGenericSubtitle": "Сервер менен байланышты текшерип, кайра аракет кылыңыз",
+  "actionRetry": "Кайталоо",
+
+  "settingsPreviewFormattersSection": "Форматтоо",
+  "settingsPreviewWidgetsSection": "Design-system виджеттери",
+
+  "waiterNavHall": "Зал",
+  "waiterNavHallMap": "Зал картасы",
+  "waiterNavOrders": "Буйрутмалар",
+  "waiterNavMenu": "Меню",
+  "waiterNavProfile": "Профиль",
+  "waiterStationLabel": "Станция {number}",
+  "@waiterStationLabel": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterMenuStub": "Меню көрүү — иштелүүдө",
+  "waiterOrdersTitle": "Менин буйрутмаларым",
+  "waiterOrdersEmptyTitle": "Активдүү буйрутмалар жок",
+  "waiterOrdersEmptySubtitle": "Бардык коноктор тейлелди же жаңы эсеп ачууну күтүшөт.",
+  "waiterOrdersFilterAll": "Баары",
+  "waiterOrdersFilterCooking": "Даярдалууда",
+  "waiterOrdersFilterReady": "Тейлөөгө даяр",
+  "waiterOrdersFilterPayment": "Төлөмдү күтүшөт",
+  "waiterOrdersOpen": "Ачуу",
+  "waiterOrdersServed": "Тамак тейледим",
+  "waiterOrdersCardMeta": "{guests} конок · {time}",
+  "@waiterOrdersCardMeta": {
+    "placeholders": {
+      "guests": { "type": "int" },
+      "time": { "type": "String" }
+    }
+  },
+  "waiterOrdersStatusCooking": "Даярдалууда",
+  "waiterOrdersStatusReady": "Тейлөөгө даяр",
+  "waiterOrdersStatusPayment": "Төлөмдү күтүшөт",
+  "waiterHallSelectedTableLabel": "Тандалган стол",
+  "waiterHallSelectedTable": "Стол {number}",
+  "@waiterHallSelectedTable": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterHallSelectedStatusLabel": "Статус",
+  "waiterHallAssignWaiter": "Официантты дайындоо",
+  "waiterHallOpenOrder": "Буйрутманы ачуу",
+  "waiterNewOrder": "Жаңы буйрутма",
+  "waiterNotifications": "Эскертмелер",
+  "waiterNotificationsTitle": "Эскертмелер",
+  "waiterNotificationsEmpty": "QR-менюдан жаңы алдын ала заказ жок",
+  "waiterPreorderOpen": "Заказды ачуу",
+  "waiterPreorderTableTitle": "Стол {number}",
+  "@waiterPreorderTableTitle": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterPreorderItemsCount": "{count, plural, one{{count} позиция} other{{count} позиция}}",
+  "@waiterPreorderItemsCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "tableStatusQrPreorder": "QR алдын ала заказ",
+  "waiterHallEmptyTitle": "Залдар жок",
+  "waiterHallEmptySubtitle": "Админкада залдарды жана столдорду кошуңуз",
+  "waiterHallNoTablesTitle": "Бул залда стол жок",
+  "waiterHallNoTablesSubtitle": "Админкада текшериңиз",
+  "waiterOrderScreenTitle": "Буйрутма",
+  "waiterOrderStubTitle": "Стол {number} — буйрутма экраны (W2)",
+  "@waiterOrderStubTitle": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterOrderStubBody": "Толук буйрутма интерфейси (меню + себет) W2 этабында.",
+  "waiterBackToHall": "Залга кайтуу",
+  "waiterOrdersStub": "Буйрутмалар тизмеси — иштелүүдө (W4)",
+
+  "tableStatusFree": "Бош",
+  "tableStatusOrderAccepted": "Буйрутма кабыл алынды",
+  "tableStatusPendingPayment": "Төлөмдү күтүөт",
+  "tableStatusNeedsCleaning": "Тазалоо керек",
+  "tableStatusVacated": "Бошотулду",
+  "waiterHallInactiveTitle": "Активдүү стол жок",
+  "waiterHallInactiveSubtitle": "Бул зонада активдүү буйрутма же конок жок. Жаңы сменаны баштаңыз же башка залды тандаңыз.",
+  "tableStatusOccupied": "Ээлешкен",
+  "tableStatusOccupiedMinutes": "Ээлешкен {minutes} мүн",
+  "@tableStatusOccupiedMinutes": {
+    "placeholders": { "minutes": { "type": "int" } }
+  },
+  "tableStatusReserved": "Резерв",
+  "tableStatusBill": "Эсеп",
+  "tableSeats": "{count} орун",
+  "@tableSeats": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "waiterOrderTableTitle": "Стол {number}",
+  "@waiterOrderTableTitle": {
+    "placeholders": { "number": { "type": "String" } }
+  },
+  "waiterOrderHeader": "Стол {table} · Буйрутма {order}",
+  "@waiterOrderHeader": {
+    "placeholders": {
+      "table": { "type": "String" },
+      "order": { "type": "String" }
+    }
+  },
+  "waiterOrderGuests": "Коноктор",
+  "waiterOrderGuestsCaps": "Коноктор",
+  "waiterOrderMenuSection": "Меню",
+  "waiterOrderCartTitle": "Буйрутма",
+  "waiterOrderCartCurrent": "Учурдагы буйрутма",
+  "waiterOrderCartNewItems": "Жаңы позициялар",
+  "waiterOrderCartSentKitchen": "Ашканага жөнөтүлгөн",
+  "waiterOrderSystemOnline": "Система статусу: Онлайн",
+  "waiterOrderLocalServer": "Жергиликтүү сервер v{version}",
+  "@waiterOrderLocalServer": {
+    "placeholders": { "version": { "type": "String" } }
+  },
+  "waiterOrderSupport": "Колдоо кызматы",
+  "waiterOrderHelp": "Жардам",
+  "waiterOrderCartEmpty": "Менюдан тамак-аш кошуңуз",
+  "waiterOrderTotal": "Жалпы",
+  "waiterOrderSumLabel": "Сумма:",
+  "waiterSendToKitchen": "Ашканага жөнөтүү",
+  "waiterSendToKitchenSuccess": "Ашканага жөнөтүлдү: {count}",
+  "@waiterSendToKitchenSuccess": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "waiterSendToKitchenEmpty": "Жөнөтүүгө жаңы тамак-аш жок",
+  "waiterSendToKitchenFailed": "Ашканага жөнөтүү мүмкүн эмес",
+  "waiterSaveAndExit": "Сактап чыгуу",
+  "waiterOrderNoDishes": "Категорияда тамак-аш жок",
+  "waiterOrderTabMenu": "Меню",
+  "waiterOrderTabCart": "Себет",
+  "waiterDishModifierDoneness": "Пиширүү даражасы",
+  "waiterDishModifierOptions": "Опциялар",
+  "waiterDishCourseLabel": "Келүү катары",
+  "waiterDishCourseSecond": "2-курс",
+  "waiterDishCourseDefault": "Демейки: 1-курс",
+  "waiterDishCommentLabel": "Ашпозчуга комментарий",
+  "waiterDishCommentHint": "тузсуз, well done…",
+  "waiterDishAddCancel": "Жокко чыгаруу",
+  "waiterDishClose": "Жабуу",
+  "waiterDishBrowseFallback": "Тамактын сүрөттөмөсү азырынча жок.",
+  "waiterDishAddConfirm": "Заказга · {price}",
+  "@waiterDishAddConfirm": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  }
+}

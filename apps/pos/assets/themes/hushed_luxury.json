@@ -1,0 +1,275 @@
+{
+  "id": "hushed_luxury",
+  "name": "Hushed Luxury",
+  "fontFamilies": {
+    "heading": "Manrope",
+    "body": "Inter",
+    "fallback": ["Roboto", "sans-serif"]
+  },
+  "brand": {
+    "productName": "AURA POS",
+    "loginHeroImageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAQT_I_u8c6tWVuJIpUhIQQht0kz9YMXh_6Z78K745N7zmSLuuPQ8l0f0pimr19ro2fLGXY9aRyW7VBy-velkuo-wrFTq_WHNy8M3XSlaxw0y9idbDRvhPuHTd_B1lXrpruOs479MLoQHl3Hmau2LpKeArPuNxNohCGQnXEWK5j-NJ5I0l5rKshjokXjv4BjZjxPfCwtmy1Gd7h8KWnHlMIkjnPRK0lfqupFjNL2q2201I_RSA5w4apZWSJyXFnqWeOUqHRc_cfqEs"
+  },
+  "layout": {
+    "sideNavWidth": 256,
+    "headerHeight": 64,
+    "selectionFooterHeight": 80,
+    "tableCardHeight": 144,
+    "headerPaddingH": 24,
+    "headerTitleTabsGap": 32,
+    "hallTabsGap": 24,
+    "gridPadding": 24,
+    "gridGap": 24,
+    "tableSelectionOutlineWidth": 2,
+    "breakpoints": { "md": 768, "lg": 1024, "xl": 1280 },
+    "gridColumns": { "sm": 2, "md": 3, "lg": 4, "xl": 6 },
+    "cartPanelWidth": 384,
+    "categoryRailWidth": 192,
+    "responsiveWideBreakpoint": 900,
+    "loginCardMaxWidth": 400,
+    "orderCardHeight": 266,
+    "dishCardHeight": 248,
+    "dishImageHeight": 160,
+    "dishGridColumns": 3,
+    "orderNarrowBreakpoint": 720
+  },
+  "components": {
+    "iconXs": 16,
+    "iconSm": 18,
+    "iconMd": 20,
+    "iconLg": 24,
+    "iconXl": 28,
+    "icon2xl": 40,
+    "iconEmpty": 64,
+    "navBrandSize": 48,
+    "navBrandIconSize": 28,
+    "navItemIconSize": 24,
+    "quickAddSize": 40,
+    "guestControlSize": 40,
+    "headerDividerHeight": 32,
+    "dividerThickness": 1,
+    "statusDotSm": 8,
+    "statusDotMd": 10,
+    "microFontSize": 10,
+    "categoryIconSize": 22,
+    "categorySectionLetterSpacing": 2,
+    "systemFooterHeight": 28,
+    "buttonHeightSm": 40,
+    "buttonHeightMd": 48,
+    "buttonHeightLg": 56,
+    "dishSheetImageSize": 280,
+    "dishSheetImageHeightNarrow": 200,
+    "notificationBadgeFontSize": 9,
+    "ordersTwoColumnBreakpoint": 1100,
+    "navActiveOpacity": 0.8,
+    "emptyStateIconSize": 48
+  },
+  "light": {
+    "palette": {
+      "primary": "#061b0e",
+      "onPrimary": "#ffffff",
+      "primaryContainer": "#1b3022",
+      "onPrimaryContainer": "#819986",
+      "secondary": "#364c3c",
+      "onSecondary": "#ffffff",
+      "secondaryContainer": "#dbe2d8",
+      "onSecondaryContainer": "#5d645d",
+      "tertiary": "#434843",
+      "onTertiary": "#ffffff",
+      "tertiaryContainer": "#364c3c",
+      "onTertiaryContainer": "#819986",
+      "error": "#ba1a1a",
+      "onError": "#ffffff",
+      "errorContainer": "#ffdad6",
+      "onErrorContainer": "#93000a",
+      "surface": "#fcf9f8",
+      "onSurface": "#1c1b1b",
+      "onSurfaceVariant": "#434843",
+      "surfaceDim": "#f0edec",
+      "surfaceBright": "#fcf9f8",
+      "surfaceContainerLowest": "#ffffff",
+      "surfaceContainerLow": "#f0edec",
+      "surfaceContainer": "#f6f3f2",
+      "surfaceContainerHigh": "#e5e2e1",
+      "surfaceContainerHighest": "#e5e2e1",
+      "outline": "#737973",
+      "outlineVariant": "#c3c8c1",
+      "inverseSurface": "#1c1b1b",
+      "onInverseSurface": "#fcf9f8",
+      "inversePrimary": "#819986",
+      "surfaceTint": "#061b0e",
+      "primaryFixed": "#dbe2d8",
+      "primaryFixedDim": "#364c3c",
+      "onPrimaryFixed": "#061b0e",
+      "onPrimaryFixedVariant": "#364c3c",
+      "secondaryFixed": "#dbe2d8",
+      "secondaryFixedDim": "#c3c8c1",
+      "onSecondaryFixed": "#061b0e",
+      "onSecondaryFixedVariant": "#5d645d",
+      "tertiaryFixed": "#f0edec",
+      "tertiaryFixedDim": "#e5e2e1",
+      "onTertiaryFixed": "#1c1b1b",
+      "onTertiaryFixedVariant": "#434843"
+    },
+    "typography": {
+      "headlineLarge":        { "size": 32, "weight": 500, "height": 1.25 },
+      "headlineLargeMobile":  { "size": 28, "weight": 500, "height": 1.29 },
+      "bodyLarge":            { "size": 18, "weight": 400, "height": 1.56 },
+      "bodyMedium":           { "size": 16, "weight": 400, "height": 1.5 },
+      "labelStrong":          { "size": 14, "weight": 600, "height": 1.43, "letterSpacing": 0.7 }
+    },
+    "spacing": {
+      "base": 8,
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "xxl": 48,
+      "gutter": 24,
+      "containerPaddingMobile": 16,
+      "containerPaddingDesktop": 64,
+      "sectionGap": 80
+    },
+    "radii": {
+      "sm": 2,
+      "md": 4,
+      "lg": 8,
+      "xl": 12,
+      "full": 9999
+    },
+    "semantic": {
+      "statusOnline": "#34a853",
+      "orderCookingAccent": "#92400e",
+      "table": {
+        "free": { "background": "#dcfce7", "foreground": "#166534" },
+        "occupied": { "background": "#dbeafe", "foreground": "#1e40af" },
+        "orderAccepted": { "background": "#ffedd5", "foreground": "#9a3412" },
+        "pendingPayment": { "background": "#fef9c3", "foreground": "#854d0e" },
+        "needsCleaning": { "background": "#ffdad6", "foreground": "#93000a" },
+        "vacated": { "background": "#e5e2e1", "foreground": "#434843" },
+        "qrPreorder": { "background": "#ede9fe", "foreground": "#5b21b6" }
+      },
+      "order": {
+        "cooking": { "background": "#fef3c7", "foreground": "#92400e" },
+        "ready": { "background": "#dcfce7", "foreground": "#166534" },
+        "payment": { "background": "#fef9c3", "foreground": "#854d0e" }
+      }
+    },
+    "shadows": {
+      "level1": [
+        { "x": 0, "y": 4,  "blur": 20, "spread": 0, "color": "#000000", "opacity": 0.04 }
+      ],
+      "level2": [
+        { "x": 0, "y": 12, "blur": 40, "spread": 0, "color": "#000000", "opacity": 0.10 }
+      ],
+      "navBar": [
+        { "x": 0, "y": 1,  "blur": 4, "spread": 0, "color": "#000000", "opacity": 0.05 }
+      ]
+    }
+  },
+  "dark": {
+    "palette": {
+      "primary": "#8bd0ef",
+      "onPrimary": "#003546",
+      "primaryContainer": "#004d64",
+      "onPrimaryContainer": "#bde9ff",
+      "secondary": "#b4cad6",
+      "onSecondary": "#1f333c",
+      "secondaryContainer": "#354a53",
+      "onSecondaryContainer": "#d0e6f2",
+      "tertiary": "#c6c2ea",
+      "onTertiary": "#2f2d4d",
+      "tertiaryContainer": "#454364",
+      "onTertiaryContainer": "#e3dfff",
+      "error": "#ffb4ab",
+      "onError": "#690005",
+      "errorContainer": "#93000a",
+      "onErrorContainer": "#ffdad6",
+      "surface": "#0f1417",
+      "onSurface": "#dfe3e7",
+      "onSurfaceVariant": "#c0c8cd",
+      "surfaceDim": "#0f1417",
+      "surfaceBright": "#353a3d",
+      "surfaceContainerLowest": "#0a0f11",
+      "surfaceContainerLow": "#171c1f",
+      "surfaceContainer": "#1b2023",
+      "surfaceContainerHigh": "#262b2e",
+      "surfaceContainerHighest": "#303538",
+      "outline": "#8a9297",
+      "outlineVariant": "#40484c",
+      "inverseSurface": "#dfe3e7",
+      "onInverseSurface": "#2c3134",
+      "inversePrimary": "#126682",
+      "surfaceTint": "#8bd0ef",
+      "primaryFixed": "#bde9ff",
+      "primaryFixedDim": "#8bd0ef",
+      "onPrimaryFixed": "#001f2a",
+      "onPrimaryFixedVariant": "#004d64",
+      "secondaryFixed": "#d0e6f2",
+      "secondaryFixedDim": "#b4cad6",
+      "onSecondaryFixed": "#081e27",
+      "onSecondaryFixedVariant": "#354a53",
+      "tertiaryFixed": "#e3dfff",
+      "tertiaryFixedDim": "#c6c2ea",
+      "onTertiaryFixed": "#1a1836",
+      "onTertiaryFixedVariant": "#454364"
+    },
+    "typography": {
+      "headlineLarge":        { "size": 32, "weight": 500, "height": 1.25 },
+      "headlineLargeMobile":  { "size": 28, "weight": 500, "height": 1.29 },
+      "bodyLarge":            { "size": 18, "weight": 400, "height": 1.56 },
+      "bodyMedium":           { "size": 16, "weight": 400, "height": 1.5 },
+      "labelStrong":          { "size": 14, "weight": 600, "height": 1.43, "letterSpacing": 0.7 }
+    },
+    "spacing": {
+      "base": 8,
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "xxl": 48,
+      "gutter": 24,
+      "containerPaddingMobile": 16,
+      "containerPaddingDesktop": 64,
+      "sectionGap": 80
+    },
+    "radii": {
+      "sm": 2,
+      "md": 4,
+      "lg": 8,
+      "xl": 12,
+      "full": 9999
+    },
+    "semantic": {
+      "statusOnline": "#34a853",
+      "orderCookingAccent": "#92400e",
+      "table": {
+        "free": { "background": "#1b3d2a", "foreground": "#86efac" },
+        "occupied": { "background": "#1e3a5f", "foreground": "#93c5fd" },
+        "orderAccepted": { "background": "#431407", "foreground": "#fdba74" },
+        "pendingPayment": { "background": "#422006", "foreground": "#fde047" },
+        "needsCleaning": { "background": "#5c1010", "foreground": "#ffb4ab" },
+        "vacated": { "background": "#303538", "foreground": "#c0c8cd" },
+        "qrPreorder": { "background": "#2e1065", "foreground": "#c4b5fd" }
+      },
+      "order": {
+        "cooking": { "background": "#431407", "foreground": "#fdba74" },
+        "ready": { "background": "#1b3d2a", "foreground": "#86efac" },
+        "payment": { "background": "#422006", "foreground": "#fde047" }
+      }
+    },
+    "shadows": {
+      "level1": [
+        { "x": 0, "y": 4,  "blur": 20, "spread": 0, "color": "#000000", "opacity": 0.04 }
+      ],
+      "level2": [
+        { "x": 0, "y": 12, "blur": 40, "spread": 0, "color": "#000000", "opacity": 0.10 }
+      ],
+      "navBar": [
+        { "x": 0, "y": 1,  "blur": 4, "spread": 0, "color": "#000000", "opacity": 0.05 }
+      ]
+    }
+  }
+}

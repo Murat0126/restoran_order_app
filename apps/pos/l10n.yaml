@@ -1,0 +1,12 @@
+# Настройки кодогенерации `flutter gen-l10n`.
+# Файлы генерятся в lib/l10n/generated/ (не synthetic package).
+# Чтобы новый ключ был доступен: добавить в app_ru.arb (+ app_ky.arb),
+# затем `flutter gen-l10n` (либо `flutter pub get` подхватит автоматически).
+
+arb-dir: lib/l10n/arb
+template-arb-file: app_ru.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+output-dir: lib/l10n/generated
+nullable-getter: false
+
