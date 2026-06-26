@@ -87,15 +87,6 @@ class _WaiterHallScreenState extends ConsumerState<WaiterHallScreen> {
           }
         }
 
-        final hasActiveTables = tables.any((t) {
-          final o = layout.orderForTable(t);
-          return o != null ||
-              t.status == TableStatus.occupied ||
-              t.status == TableStatus.bill ||
-              t.status == TableStatus.reserved;
-        });
-        final showInactiveHall = tables.isNotEmpty && !hasActiveTables;
-
         return CallbackShortcuts(
           bindings: {
             const SingleActivator(LogicalKeyboardKey.escape): _onEscape,
@@ -133,9 +124,7 @@ class _WaiterHallScreenState extends ConsumerState<WaiterHallScreen> {
                           subtitle: l10n.waiterHallNoTablesSubtitle,
                           icon: Icons.table_bar_outlined,
                         )
-                      : showInactiveHall
-                          ? _EmptyHallState()
-                          : ColoredBox(
+                      : ColoredBox(
                               color: context.appTheme.palette.surfaceBright,
                               child: LayoutBuilder(
                                 builder: (context, constraints) {
@@ -215,54 +204,6 @@ class _WaiterHallScreenState extends ConsumerState<WaiterHallScreen> {
           ),
         );
       },
-    );
-  }
-}
-
-class _EmptyHallState extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final s = context.appTheme;
-    final l10n = context.l10n;
-
-    return Center(
-      child: Padding(
-        padding: EdgeInsets.all(s.spacing.xxl),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              padding: EdgeInsets.all(s.spacing.xl),
-              decoration: BoxDecoration(
-                color: s.palette.surfaceContainer,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                Icons.event_busy_outlined,
-                size: s.components.emptyStateIconSize,
-                color: s.palette.outline,
-              ),
-            ),
-            SizedBox(height: s.spacing.lg),
-            Text(
-              l10n.waiterHallInactiveTitle,
-              style: s.typography.headlineMedium,
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: s.spacing.sm),
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 420),
-              child: Text(
-                l10n.waiterHallInactiveSubtitle,
-                style: s.typography.bodyMedium.copyWith(
-                  color: s.palette.onSurfaceVariant,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
@@ -520,12 +461,13 @@ class _NewOrderButtonState extends State<_NewOrderButton> {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.add, size: s.components.iconSm, color: p.onPrimary),
+                  Icon(Icons.add,
+                      size: s.components.iconSm, color: p.onPrimaryContainer),
                   SizedBox(width: s.spacing.sm),
                   Text(
                     l10n.waiterNewOrder,
                     style: s.typography.labelStrong.copyWith(
-                      color: p.onPrimary,
+                      color: p.onPrimaryContainer,
                       height: 1,
                     ),
                   ),
@@ -606,11 +548,6 @@ class _TableSelectionFooter extends StatelessWidget {
                       valueStyle: s.typography.bodyMedium,
                     ),
                     const Spacer(),
-                    _AssignWaiterButton(
-                      label: l10n.waiterHallAssignWaiter,
-                      onPressed: () {},
-                    ),
-                    SizedBox(width: s.spacing.md),
                     _OpenOrderButton(
                       label: l10n.waiterHallOpenOrder,
                       onPressed: onOpenOrder,
@@ -661,33 +598,6 @@ class _FooterField extends StatelessWidget {
   }
 }
 
-class _AssignWaiterButton extends StatelessWidget {
-  const _AssignWaiterButton({required this.label, required this.onPressed});
-
-  final String label;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    final s = context.appTheme;
-    return Material(
-      color: s.palette.surfaceContainerHighest,
-      borderRadius: BorderRadius.circular(s.radii.lg),
-      child: InkWell(
-        onTap: onPressed,
-        borderRadius: BorderRadius.circular(s.radii.lg),
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: s.spacing.lg,
-            vertical: s.spacing.sm,
-          ),
-          child: Text(label, style: s.typography.labelStrong.copyWith(height: 1)),
-        ),
-      ),
-    );
-  }
-}
-
 class _OpenOrderButton extends StatefulWidget {
   const _OpenOrderButton({required this.label, this.onPressed});
 
@@ -710,7 +620,7 @@ class _OpenOrderButtonState extends State<_OpenOrderButton> {
       scale: _pressed ? 0.95 : 1,
       duration: const Duration(milliseconds: 150),
       child: Material(
-        color: p.primaryContainer,
+        color: p.secondary,
         borderRadius: BorderRadius.circular(s.radii.lg),
         child: InkWell(
           onTap: widget.onPressed,
@@ -726,7 +636,7 @@ class _OpenOrderButtonState extends State<_OpenOrderButton> {
             child: Text(
               widget.label,
               style: s.typography.labelStrong.copyWith(
-                color: p.onPrimary,
+                color: p.onSecondary,
                 height: 1,
               ),
             ),

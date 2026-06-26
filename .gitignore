@@ -37,11 +37,6 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
-
 # Дизайн-артефакты Stitch (распаковка ZIP) — рабочая папка,
 # исходник у дизайнера, в репозитории дублировать не нужно.
 /design/
@@ -53,5 +48,5 @@ app.*.map.json
 # Cursor / локальные IDE-настройки.
 .cursor/
 
-# Android build output (корневой legacy-модуль).
-/android/build/
+# MCP-конфиг с секретами (API-ключи) — не коммитим.
+.mcp.json

@@ -6,12 +6,12 @@ import 'package:shared_models/shared_models.dart';
 import '../features/auth/auth_providers.dart';
 import '../features/auth/login_screen.dart';
 import '../features/auth/role_labels.dart';
+import '../features/cashier/presentation/cashier_home_screen.dart';
 import '../features/common/not_found_screen.dart';
 import '../features/hall/presentation/waiter_hall_screen.dart';
 import '../features/home/role_home_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/order/presentation/waiter_order_screen.dart';
-import '../features/waiter/presentation/waiter_menu_screen.dart';
 import '../features/waiter/presentation/waiter_orders_screen.dart';
 import '../features/waiter/presentation/waiter_shell.dart';
 
@@ -27,7 +27,6 @@ class AppRoutes {
   static const director = '/director';
   static const waiter = '/waiter';
   static const waiterOrders = '/waiter/orders';
-  static const waiterMenu = '/waiter/menu';
   static String waiterOrder(String tableId) => '/waiter/order/$tableId';
   static const cashier = '/cashier';
   static const kds = '/kds';
@@ -140,10 +139,6 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             const WaiterShell(child: WaiterOrdersScreen()),
       ),
       GoRoute(
-        path: AppRoutes.waiterMenu,
-        builder: (_, __) => const WaiterShell(child: WaiterMenuScreen()),
-      ),
-      GoRoute(
         path: '${AppRoutes.waiter}/order/:tableId',
         builder: (_, state) => WaiterOrderScreen(
           tableId: state.pathParameters['tableId']!,
@@ -151,7 +146,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: AppRoutes.cashier,
-        builder: (_, __) => const RoleHomeScreen(role: UserRole.cashier),
+        builder: (_, __) => const CashierHomeScreen(),
       ),
       GoRoute(
         path: AppRoutes.kds,

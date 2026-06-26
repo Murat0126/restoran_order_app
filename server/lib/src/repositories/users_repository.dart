@@ -39,13 +39,85 @@ class UsersRepository {
     required UserRole role,
     required String passwordHash,
     String? email,
+    String? pinHash,
   }) {
     _db.execute(
       '''INSERT INTO users
-          (id, username, display_name, role, email, password_hash)
-         VALUES (?, ?, ?, ?, ?, ?)''',
-      [id, username, displayName, role.name, email, passwordHash],
+          (id, username, display_name, role, email, password_hash, pin_hash)
+         VALUES (?, ?, ?, ?, ?, ?, ?)''',
+      [id, username, displayName, role.name, email, passwordHash, pinHash],
     );
+  }
+
+  /// Все пользователи (для админки). Сортировка: по роли, затем по имени.
+  List<User> allUsers() {
+    final rows =
+        _db.select('SELECT * FROM users ORDER BY role, display_name');
+    return rows.map(_mapToUser).toList(growable: false);
+  }
+
+  /// Частичное обновление профиля. Пустой [email] трактуется как `NULL`.
+  void updateProfile({
+    required String id,
+    String? displayName,
+    UserRole? role,
+    String? email,
+  }) {
+    final sets = <String>[];
+    final args = <Object?>[];
+    if (displayName != null) {
+      sets.add('display_name = ?');
+      args.add(displayName);
+    }
+    if (role != null) {
+      sets.add('role = ?');
+      args.add(role.name);
+    }
+    if (email != null) {
+      sets.add('email = ?');
+      args.add(email.isEmpty ? null : email);
+    }
+    if (sets.isEmpty) return;
+    args.add(id);
+    _db.execute('UPDATE users SET ${sets.join(', ')} WHERE id = ?', args);
+  }
+
+  void setPassword(String id, String passwordHash) {
+    _db.execute(
+      'UPDATE users SET password_hash = ? WHERE id = ?',
+      [passwordHash, id],
+    );
+  }
+
+  /// Устанавливает или (при `null`) сбрасывает PIN быстрого входа.
+  void setPin(String id, String? pinHash) {
+    _db.execute('UPDATE users SET pin_hash = ? WHERE id = ?', [pinHash, id]);
+  }
+
+  void deleteUser(String id) {
+    _db.execute('DELETE FROM users WHERE id = ?', [id]);
+  }
+
+  int countByRole(UserRole role) {
+    final r = _db.select(
+      'SELECT COUNT(*) AS c FROM users WHERE role = ?',
+      [role.name],
+    );
+    return r.first['c'] as int;
+  }
+
+  /// PIN-вход: возвращает id пользователя, чей PIN совпадает, иначе `null`.
+  /// Перебираем только тех, у кого PIN задан (их единицы — это нормально).
+  String? userIdByPin(String pin) {
+    final rows =
+        _db.select('SELECT id, pin_hash FROM users WHERE pin_hash IS NOT NULL');
+    for (final row in rows) {
+      final hash = row['pin_hash'] as String?;
+      if (hash != null && verifyPassword(pin, hash)) {
+        return row['id'] as String;
+      }
+    }
+    return null;
   }
 
   bool isEmpty() {

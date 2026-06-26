@@ -320,6 +320,7 @@ class _DishFooter extends StatelessWidget {
                   style: OutlinedButton.styleFrom(
                     foregroundColor: s.palette.onSurfaceVariant,
                     side: BorderSide(color: s.palette.outlineVariant),
+                    minimumSize: Size(0, s.components.buttonHeightMd),
                     padding: EdgeInsets.symmetric(
                       horizontal: s.spacing.xl,
                       vertical: s.spacing.md,
@@ -329,33 +330,36 @@ class _DishFooter extends StatelessWidget {
                   child: Text(cancelLabel),
                 ),
                 SizedBox(width: s.spacing.md),
-                FilledButton.icon(
-                  onPressed: submitting ? null : onSubmit,
-                  style: FilledButton.styleFrom(
-                    backgroundColor: s.palette.primaryContainer,
-                    foregroundColor: s.palette.onPrimary,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: s.spacing.lg,
-                      vertical: s.spacing.md,
+                Flexible(
+                  child: FilledButton.icon(
+                    onPressed: submitting ? null : onSubmit,
+                    style: FilledButton.styleFrom(
+                      backgroundColor: s.palette.primary,
+                      foregroundColor: s.palette.onPrimary,
+                      minimumSize: Size(0, s.components.buttonHeightMd),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: s.spacing.lg,
+                        vertical: s.spacing.md,
+                      ),
                     ),
-                  ),
-                  icon: submitting
-                      ? SizedBox(
-                          width: s.components.iconMd,
-                          height: s.components.iconMd,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            color: s.palette.onPrimary,
+                    icon: submitting
+                        ? SizedBox(
+                            width: s.components.iconMd,
+                            height: s.components.iconMd,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: s.palette.onPrimary,
+                            ),
+                          )
+                        : Icon(
+                            Icons.shopping_cart_outlined,
+                            size: s.components.iconMd,
                           ),
-                        )
-                      : Icon(
-                          Icons.shopping_cart_outlined,
-                          size: s.components.iconMd,
-                        ),
-                  label: Text(
-                    lineTotalLabel,
-                    style: s.typography.labelStrong,
-                    overflow: TextOverflow.ellipsis,
+                    label: Text(
+                      lineTotalLabel,
+                      style: s.typography.labelStrong,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                 ),
               ],
@@ -379,7 +383,7 @@ class _DishFooter extends StatelessWidget {
                 FilledButton.icon(
                   onPressed: submitting ? null : onSubmit,
                   style: FilledButton.styleFrom(
-                    backgroundColor: s.palette.primaryContainer,
+                    backgroundColor: s.palette.primary,
                     foregroundColor: s.palette.onPrimary,
                     padding: EdgeInsets.symmetric(vertical: s.spacing.md),
                   ),

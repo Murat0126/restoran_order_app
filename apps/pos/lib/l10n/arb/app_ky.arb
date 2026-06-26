@@ -208,13 +208,11 @@
   "waiterNavHall": "Зал",
   "waiterNavHallMap": "Зал картасы",
   "waiterNavOrders": "Буйрутмалар",
-  "waiterNavMenu": "Меню",
   "waiterNavProfile": "Профиль",
   "waiterStationLabel": "Станция {number}",
   "@waiterStationLabel": {
     "placeholders": { "number": { "type": "String" } }
   },
-  "waiterMenuStub": "Меню көрүү — иштелүүдө",
   "waiterOrdersTitle": "Менин буйрутмаларым",
   "waiterOrdersEmptyTitle": "Активдүү буйрутмалар жок",
   "waiterOrdersEmptySubtitle": "Бардык коноктор тейлелди же жаңы эсеп ачууну күтүшөт.",
@@ -240,7 +238,6 @@
     "placeholders": { "number": { "type": "String" } }
   },
   "waiterHallSelectedStatusLabel": "Статус",
-  "waiterHallAssignWaiter": "Официантты дайындоо",
   "waiterHallOpenOrder": "Буйрутманы ачуу",
   "waiterNewOrder": "Жаңы буйрутма",
   "waiterNotifications": "Эскертмелер",
@@ -344,5 +341,56 @@
     "placeholders": {
       "price": { "type": "String" }
     }
-  }
+  },
+  "cashierTitle": "Касса",
+  "cashierSearchHint": "Стол боюнча издөө",
+  "cashierFilterAll": "Бардык заказдар",
+  "cashierFilterAwaitingPayment": "Төлөмдү күтүүдө",
+  "cashierEmptyTitle": "Активдүү заказдар жок",
+  "cashierEmptySubtitle": "Официанттар заказ ачканда, алар бул жерде көрүнөт.",
+  "cashierCardMeta": "{guests} конок · {time}",
+  "@cashierCardMeta": {
+    "placeholders": {
+      "guests": { "type": "int" },
+      "time": { "type": "String" }
+    }
+  },
+  "cashierNoWaiter": "Официант дайындалган эмес",
+  "cashierStatusAwaitingPayment": "Төлөмгө даяр",
+  "cashierStatusServing": "Тейленүүдө",
+  "cashierActionPay": "Төлөөгө",
+  "cashierActionDetails": "Чоо-жайы",
+  "cashierTableTitle": "Стол {number}",
+  "@cashierTableTitle": {
+    "placeholders": {
+      "number": { "type": "String" }
+    }
+  },
+  "cashierPayItemsTitle": "Позициялар",
+  "cashierPaySubtotal": "Аралык жыйынтык",
+  "cashierPayDiscount": "Арзандатуу",
+  "cashierPayService": "Тейлөө",
+  "cashierPayTotal": "Жыйынтык",
+  "cashierPayPaid": "Төлөнгөн",
+  "cashierPayBalance": "Төлөөгө",
+  "cashierPayMethodLabel": "Төлөө ыкмасы",
+  "cashierPayMethodCash": "Накталай",
+  "cashierPayMethodCard": "Карта",
+  "cashierPayMethodTransfer": "Которуу",
+  "cashierPayAmountLabel": "Киргизилүүчү сумма",
+  "cashierPayConfirm": "Төлөмдү кабыл алуу",
+  "cashierPayChange": "Кайтарым: {amount}",
+  "@cashierPayChange": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "cashierPayPartialRemaining": "Калат: {amount}",
+  "@cashierPayPartialRemaining": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "cashierPaySuccess": "Төлөм кабыл алынды",
+  "cashierPayError": "Төлөмдү кабыл алуу мүмкүн болбоду"
 }

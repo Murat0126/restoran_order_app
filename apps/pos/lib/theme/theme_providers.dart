@@ -86,10 +86,11 @@ class ThemeModeNotifier extends StateNotifier<ThemeMode> {
     switch (raw) {
       case 'light':
         return ThemeMode.light;
-      case 'dark':
-        return ThemeMode.dark;
-      default:
+      case 'system':
         return ThemeMode.system;
+      default:
+        // По умолчанию — тёмная «Evening Lounge» (основной стиль POS).
+        return ThemeMode.dark;
     }
   }
 

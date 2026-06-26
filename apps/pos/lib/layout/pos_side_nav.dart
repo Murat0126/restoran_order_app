@@ -147,12 +147,12 @@ class _BrandHeader extends StatelessWidget {
             width: s.components.navBrandSize,
             height: s.components.navBrandSize,
             decoration: BoxDecoration(
-              color: p.onPrimary,
+              color: p.secondary,
               borderRadius: BorderRadius.circular(s.radii.lg),
             ),
             child: Icon(
               Icons.restaurant,
-              color: p.primary,
+              color: p.onSecondary,
               size: s.components.navBrandIconSize,
             ),
           ),
@@ -160,7 +160,7 @@ class _BrandHeader extends StatelessWidget {
           Text(
             context.appTheme.brand.productName,
             style: s.typography.headlineMedium.copyWith(
-              color: p.onPrimary,
+              color: p.onPrimaryContainer,
               fontWeight: FontWeight.w700,
               height: 1.3,
             ),

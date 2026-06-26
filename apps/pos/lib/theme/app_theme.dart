@@ -96,7 +96,8 @@ class AppTheme {
           backgroundColor: scheme.primary,
           foregroundColor: scheme.onPrimary,
           textStyle: typography.labelStrong,
-          minimumSize: Size.fromHeight(components.buttonHeightMd),
+          // Не Size.fromHeight — он задаёт w=Infinity и ломает кнопки в Row.
+          minimumSize: Size(0, components.buttonHeightMd),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radii.md),
           ),
@@ -111,7 +112,7 @@ class AppTheme {
           foregroundColor: scheme.primary,
           side: BorderSide(color: scheme.outlineVariant),
           textStyle: typography.labelStrong,
-          minimumSize: Size.fromHeight(components.buttonHeightMd),
+          minimumSize: Size(0, components.buttonHeightMd),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radii.md),
           ),

@@ -109,7 +109,7 @@ class _CategoryTile extends StatelessWidget {
                   size: s.components.categoryIconSize,
                   color: selected
                       ? p.primary
-                      : p.onPrimaryFixedVariant,
+                      : p.onPrimaryContainer.withValues(alpha: 0.75),
                 ),
                 SizedBox(width: s.spacing.sm),
                 Expanded(
@@ -118,7 +118,7 @@ class _CategoryTile extends StatelessWidget {
                     style: s.typography.labelStrong.copyWith(
                       color: selected
                           ? p.primary
-                          : p.onPrimaryFixedVariant,
+                          : p.onPrimaryContainer.withValues(alpha: 0.75),
                     ),
                   ),
                 ),

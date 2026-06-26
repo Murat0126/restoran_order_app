@@ -423,7 +423,7 @@ class _PrimaryCartButton extends StatelessWidget {
     final s = context.appTheme;
     final fg = s.palette.onPrimary;
     return Material(
-      color: s.palette.primaryContainer,
+      color: s.palette.primary,
       borderRadius: BorderRadius.circular(s.radii.lg),
       child: InkWell(
         onTap: enabled && !loading ? onPressed : null,

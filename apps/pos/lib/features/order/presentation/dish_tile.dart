@@ -36,6 +36,7 @@ class DishTile extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: radius,
+        border: Border.all(color: p.outlineVariant),
         boxShadow: s.shadows.level1,
       ),
       child: Material(

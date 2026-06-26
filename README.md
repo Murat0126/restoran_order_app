@@ -1,25 +1,25 @@
-# restaurant_menu
+# Restaurant Order App
 
-A new Flutter project.
+POS-система для ресторана: серверная часть на одной машине внутри
+заведения связывает POS-приложение персонала и QR-меню для гостей.
 
-## Getting Started
+## Структура монорепо
 
-This project is a starting point for a Flutter application.
+| Каталог                     | Что это                                                            |
+|-----------------------------|-------------------------------------------------------------------|
+| `server/`                   | Локальный сервер на Dart Frog (REST + WebSocket + SQLite).         |
+| `apps/pos/`                 | POS-приложение персонала (официант / касса / повар / директор / админ). |
+| `client_menu/`              | Веб-страница QR-меню для гостей (Flutter Web).                     |
+| `packages/shared_models/`   | Общие неизменяемые DTO для сервера и клиентов (чистый Dart).       |
+| `packages/api_client/`      | HTTP/WebSocket-клиент к серверу.                                   |
+| `docs/`                     | Документация: архитектура, API, деплой, гайды.                     |
+| `scripts/`                  | PowerShell-скрипты сборки и запуска.                               |
 
-A few resources to get you started if this is your first Flutter project:
+## Быстрый старт
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```powershell
+# Собрать QR-меню → скопировать в server/public/ → запустить сервер.
+./scripts/build_and_run.ps1
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-    Как протестировать?
-    Включите Bluetooth на телефоне и принтере.
-    Запустите приложение и перейдите в детали заказа.
-    Нажмите кнопку «Распечатать чек».
-    Если принтер не реагирует:
-        Проверьте, сопряжён ли он с телефоном.
-        Убедитесь, что принтер поддерживает ESC/POS.
-        Попробуйте другой Bluetooth-принтер.
+Подробнее: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DEPLOY.md](docs/DEPLOY.md), [server/README.md](server/README.md).

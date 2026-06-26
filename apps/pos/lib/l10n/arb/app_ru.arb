@@ -233,13 +233,11 @@
   "waiterNavHall": "Зал",
   "waiterNavHallMap": "Карта зала",
   "waiterNavOrders": "Заказы",
-  "waiterNavMenu": "Меню",
   "waiterNavProfile": "Профиль",
   "waiterStationLabel": "Станция {number}",
   "@waiterStationLabel": {
     "placeholders": { "number": { "type": "String" } }
   },
-  "waiterMenuStub": "Просмотр меню — в разработке",
   "waiterOrdersTitle": "Мои заказы",
   "waiterOrdersEmptyTitle": "Активных заказов нет",
   "waiterOrdersEmptySubtitle": "Все гости обслужены или ожидают открытия нового счёта.",
@@ -265,7 +263,6 @@
     "placeholders": { "number": { "type": "String" } }
   },
   "waiterHallSelectedStatusLabel": "Статус",
-  "waiterHallAssignWaiter": "Назначить официанта",
   "waiterHallOpenOrder": "Открыть заказ",
   "waiterNewOrder": "Новый заказ",
   "waiterNotifications": "Уведомления",
@@ -369,5 +366,56 @@
     "placeholders": {
       "price": { "type": "String" }
     }
-  }
+  },
+  "cashierTitle": "Касса",
+  "cashierSearchHint": "Поиск по столу",
+  "cashierFilterAll": "Все заказы",
+  "cashierFilterAwaitingPayment": "Ожидают оплаты",
+  "cashierEmptyTitle": "Активных заказов нет",
+  "cashierEmptySubtitle": "Новые заказы появятся здесь, когда официанты их откроют.",
+  "cashierCardMeta": "{guests} гостя · {time}",
+  "@cashierCardMeta": {
+    "placeholders": {
+      "guests": { "type": "int" },
+      "time": { "type": "String" }
+    }
+  },
+  "cashierNoWaiter": "Официант не назначен",
+  "cashierStatusAwaitingPayment": "Готов к оплате",
+  "cashierStatusServing": "Обслуживается",
+  "cashierActionPay": "К оплате",
+  "cashierActionDetails": "Детали",
+  "cashierTableTitle": "Стол {number}",
+  "@cashierTableTitle": {
+    "placeholders": {
+      "number": { "type": "String" }
+    }
+  },
+  "cashierPayItemsTitle": "Позиции",
+  "cashierPaySubtotal": "Подытог",
+  "cashierPayDiscount": "Скидка",
+  "cashierPayService": "Сервис",
+  "cashierPayTotal": "Итого",
+  "cashierPayPaid": "Уже оплачено",
+  "cashierPayBalance": "К оплате",
+  "cashierPayMethodLabel": "Способ оплаты",
+  "cashierPayMethodCash": "Наличные",
+  "cashierPayMethodCard": "Карта",
+  "cashierPayMethodTransfer": "Перевод",
+  "cashierPayAmountLabel": "Сумма к внесению",
+  "cashierPayConfirm": "Принять оплату",
+  "cashierPayChange": "Сдача: {amount}",
+  "@cashierPayChange": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "cashierPayPartialRemaining": "Останется к оплате: {amount}",
+  "@cashierPayPartialRemaining": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "cashierPaySuccess": "Оплата принята",
+  "cashierPayError": "Не удалось принять оплату"
 }

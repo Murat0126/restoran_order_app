@@ -275,6 +275,77 @@ class RestaurantApiClient {
     return Order.fromJson(json['order'] as Map<String, dynamic>);
   }
 
+  // -------------------------- users (admin) ---------------------------
+
+  Future<List<User>> fetchUsers() async {
+    final json = await _request('GET', '/api/users');
+    return (json['users'] as List<dynamic>)
+        .map((e) => User.fromJson(e as Map<String, dynamic>))
+        .toList(growable: false);
+  }
+
+  Future<User> createUser({
+    required String username,
+    required String displayName,
+    required UserRole role,
+    required String password,
+    String? pin,
+    String? email,
+  }) async {
+    final json = await _request(
+      'POST',
+      '/api/users',
+      body: {
+        'username': username,
+        'displayName': displayName,
+        'role': role.name,
+        'password': password,
+        if (pin != null && pin.isNotEmpty) 'pin': pin,
+        if (email != null && email.isNotEmpty) 'email': email,
+      },
+    );
+    return User.fromJson(json['user'] as Map<String, dynamic>);
+  }
+
+  Future<User> updateUser(
+    String id, {
+    String? displayName,
+    UserRole? role,
+    String? email,
+  }) async {
+    final json = await _request(
+      'PATCH',
+      '/api/users/$id',
+      body: {
+        if (displayName != null) 'displayName': displayName,
+        if (role != null) 'role': role.name,
+        if (email != null) 'email': email,
+      },
+    );
+    return User.fromJson(json['user'] as Map<String, dynamic>);
+  }
+
+  Future<void> deleteUser(String id) async {
+    await _request('DELETE', '/api/users/$id');
+  }
+
+  Future<void> resetUserPassword(String id, String password) async {
+    await _request(
+      'POST',
+      '/api/users/$id/password',
+      body: {'password': password},
+    );
+  }
+
+  /// Задаёт PIN (или сбрасывает, если [pin] == null).
+  Future<void> setUserPin(String id, String? pin) async {
+    await _request(
+      'POST',
+      '/api/users/$id/pin',
+      body: {'pin': pin},
+    );
+  }
+
   // ---------------------------- internals -----------------------------
 
   Future<Map<String, dynamic>> _request(

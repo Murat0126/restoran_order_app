@@ -20,12 +20,7 @@ class WaiterShell extends ConsumerWidget {
     final l10n = context.l10n;
     final location = GoRouterState.of(context).uri.path;
     final onOrders = location == AppRoutes.waiterOrders;
-    final onMenu = location == AppRoutes.waiterMenu;
-    final selectedIndex = onOrders
-        ? 1
-        : onMenu
-            ? 2
-            : 0;
+    final selectedIndex = onOrders ? 1 : 0;
 
     final destinations = [
       PosNavDestination(
@@ -39,12 +34,6 @@ class WaiterShell extends ConsumerWidget {
         selectedIcon: Icons.receipt_long,
         label: l10n.waiterNavOrders,
         onTap: () => context.go(AppRoutes.waiterOrders),
-      ),
-      PosNavDestination(
-        icon: Icons.restaurant_menu_outlined,
-        selectedIcon: Icons.restaurant_menu,
-        label: l10n.waiterNavMenu,
-        onTap: () => context.go(AppRoutes.waiterMenu),
       ),
       PosNavDestination(
         icon: Icons.person_outline,
@@ -86,9 +75,6 @@ class WaiterShell extends ConsumerWidget {
           final wide =
               constraints.maxWidth >= s.layout.responsiveWideBreakpoint;
           if (wide) {
-            if (onMenu) {
-              return child;
-            }
             return Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -110,14 +96,11 @@ class WaiterShell extends ConsumerWidget {
               ],
             );
           }
-          if (onMenu) {
-            return child;
-          }
           return Column(
             children: [
               Expanded(child: child),
               NavigationBar(
-                selectedIndex: selectedIndex.clamp(0, 3),
+                selectedIndex: selectedIndex.clamp(0, 2),
                 onDestinationSelected: (i) => destinations[i].onTap(),
                 destinations: [
                   NavigationDestination(
@@ -127,10 +110,6 @@ class WaiterShell extends ConsumerWidget {
                   NavigationDestination(
                     icon: const Icon(Icons.receipt_long_outlined),
                     label: l10n.waiterNavOrders,
-                  ),
-                  NavigationDestination(
-                    icon: const Icon(Icons.restaurant_menu_outlined),
-                    label: l10n.waiterNavMenu,
                   ),
                   NavigationDestination(
                     icon: const Icon(Icons.person_outline),
